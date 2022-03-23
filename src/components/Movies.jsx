@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import { getMovies } from "../services/fakeMovieService";
 
 export class Movies extends Component {
-  state = {
-    movies: getMovies(),
-  };
+  constructor() {
+    super();
+    this.state = {
+      movies: getMovies(),
+    };
+  }
 
   handleDelete = (movie) => {
     const movies = this.state.movies.filter((m) => m._id !== movie._id);
@@ -32,7 +35,7 @@ export class Movies extends Component {
           </thead>
           <tbody>
             {this.state.movies.map((movie) => (
-              <tr key={movie._id}>
+              <tr>
                 <td>{movie.title}</td>
                 <td>{movie.genre.name}</td>
                 <td>{movie.numberInStock}</td>
