@@ -11,7 +11,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Counters/>
+    <Movies/>
   </React.StrictMode>,
   document.getElementById('root')
 );
