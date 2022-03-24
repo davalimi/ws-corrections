@@ -12,7 +12,9 @@ export class Counter extends Component {
 handleIncrement = () => {
   this.setState({value:this.state.value+1})
 }
-
+handleReset = () => {
+  this.setState({value:0})
+}
 render () {
   return(
   <>
@@ -20,6 +22,8 @@ render () {
          
          <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
          <button onClick={() => this.handleIncrement()} className="btn btn-secondary btn-sm" >increment</button>
+         <button onClick={() => this.handleReset()} className="btn btn-secondary btn-sm" >reset</button>
+        
         </div>
 
   </>   
@@ -33,8 +37,8 @@ getBadgeClasses = () => {
 }
 formatCount = () => {
   
-  const { value }= this.state;
-  return value===0 ? "zero" : value;
+  //const { value }= this.state;
+  return this.state.value===0 ? "zero" : this.state.value;
 }
 }
 export default Counter;

@@ -23,7 +23,7 @@ return (
 }
 
 */
-export default function Movie({title,genre,number,daily,}) {
+export default function Movie({id,title,genre,number,daily,}) {
     return (
         <>
         <td>{title}</td>
