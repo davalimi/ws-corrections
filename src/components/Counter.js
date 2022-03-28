@@ -26,7 +26,7 @@ render () {
          <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
          <button onClick={() => this.handleIncrement()} className="btn btn-secondary btn-sm" >increment</button>
          <button onClick={() => this.handleReset()} className="btn btn-secondary btn-sm" >reset</button>
-         <button onClick={ () => this.props.onDelete(this.state.counter)}
+         <button onClick={() => this.props.onDelete(this.state.counter)}
                 className="btn btn-danger">Supprimer</button> 
         </div>
 
