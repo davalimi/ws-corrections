@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { getMovies } from "../services/fakeMovieService";
 import Movie from "./Movie";
-
+import Mov from "./Mov";
 export class Movies extends Component {
     constructor() {
     super();
@@ -10,9 +10,11 @@ export class Movies extends Component {
 
     }
 }
-
+//handleDelete = () => {}
 handleDelete = (movie) => {
+    
     const movies= this.state.movies.filter((m)=> m._id!==movie._id);
+    console.log(movies);
     this.setState({ movies: movies});
 }
     
@@ -24,7 +26,7 @@ render(){
     //return count;
     return (
       <>  
-        <table>
+        <table className="table">
          <thead>
              <tr>
                     <th>titre</th>
@@ -38,10 +40,13 @@ render(){
         <tbody>
        {this.state.movies.map((movie)=>(
          <tr key={movie._id}>
-         <Movie title={movie.title} genre={movie.genre.name} number={movie.numberInStock} daily={movie.dailyRentalRate}></Movie>
+         <Mov title={movie.title} genre={movie.genre.name} number={movie.numberInStock} daily={movie.dailyRentalRate}></Mov>
          <td>  <button onClick={ () => this.handleDelete(movie)}
                 className="btn btn-danger">Supprimer</button> </td>
          </tr>
+         /*<Mov id={movie._id} movie={movie} title={movie.title} genre={movie.genre.name} number={movie.numberInStock} daily={movie.dailyRentalRate} onDelete={this.handleDelete}></Mov>
+         */
+         
 
        ))}
         

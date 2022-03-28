@@ -30,6 +30,7 @@ export default function Movie({id,title,genre,number,daily,}) {
          <td>{genre}</td>
          <td>{number}</td>
          <td>{daily}</td>
+         
          </>   
     )
 }
