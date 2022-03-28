@@ -6,6 +6,7 @@ export default function Card({city,lastname,name}) {
         <div>{city}</div>
         <div>{lastname}</div>
         <div>{name}</div> 
+        
         </>   
     )
 }
