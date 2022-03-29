@@ -1,52 +1,59 @@
-import React, { Component } from "react";
-import "./Counter.css";
+import React, { Component } from 'react';
 
-export class Counter extends Component {
-  constructor() {
-    super();
-    this.state = {
-      count: 0,
-      loading: true,
-    };
-  }
+class Counter extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            value:this.props.value
+        }
+    }
+  
 
-  render() {
-    setTimeout(() => this.setState({ loading: false }), 3000);
 
-    return (
-      <>
-        {this.state.loading ? (
-          <span>Loading... </span>
-        ) : (
-          <div className="counter">
-            <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-            <button
-              onClick={this.handleIncrement}
-              className="btn btn-secondary btn-sm"
-            >
-              Increment
-            </button>
-          </div>
-        )}
-      </>
-    );
-  }
 
-  // On utilise une arrow function pour éviter d'avoir à binder l'objet this
-  handleIncrement = () => {
-    this.setState({ count: this.state.count + 1 });
-  };
 
-  getBadgeClasses = () => {
-    let classes = "badge m-2 fs-6 bg-";
-    classes += this.state.count === 0 ? "warning" : "primary";
-    return classes;
-  };
+    handleIncrement = () => {
+        this.setState({ value: this.state.value + 1 });
+      };
+    
+    getBadgeClasses = () => {
+        let classes = "badge m-2 fs-6 bg-";
+        classes += this.state.value === 0 ? "warning" : "primary";
+        return classes;
+      };
+    
+    formatCount = () => {
+        const { value } = this.state;
+        return value === 0 ? "Zero" : value;
+      };
+    
 
-  formatCount = () => {
-    const { count } = this.state;
-    return count === 0 ? "Zero" : count;
-  };
+
+
+
+
+
+
+
+    render() { 
+        return ( 
+            <>
+            {this.state.loading ? (
+              <span>Loading... </span>
+            ) : (
+              <div className="counter">
+                <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+                <button
+                  onClick={this.handleIncrement}
+                  className="btn btn-secondary btn-sm"
+                >
+                  Increment
+                </button>
+              </div>
+            )}
+          </>
+         );
+    }
 }
-
+ 
 export default Counter;
