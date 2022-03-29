@@ -1,11 +1,10 @@
-import "./App.css";
-import Movies from "./components/Movies.jsx";
+import Counter from "./components/Counter.jsx";
 
 function App() {
   return (
-    <main className="container">
-      <Movies />
-    </main>
+    <>
+      <Counter />
+    </>
   );
 }
 
