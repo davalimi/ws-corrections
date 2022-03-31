@@ -5,13 +5,13 @@ import App from './App';
 import App3 from './App3';
 import Movies from './components/Movies'; 
 import Counters from './components/Counters'; 
-
+import Todos from './components/Todos';
 import reportWebVitals from './reportWebVitals'; 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Movies/>
+    <Todos/>
   </React.StrictMode>,
   document.getElementById('root')
 );
