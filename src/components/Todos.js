@@ -1,9 +1,9 @@
 import { Component } from "react";
-import Todo from "./Todo";
-import { v4 as uuidv4 } from 'uuid';
 import { useState } from "react";
 import ReactDOM from 'react-dom';
-import '../App.css';
+import "./Todos.css";
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 function Todos()  { 
     const [itemList,setItemlist]=useState([
@@ -27,22 +27,27 @@ const handleDeleteItem = (index) => {
     
   return(
   <>
-                 
-        <input type="text" id="item"  name="item" ></input><button onClick={handleAddItem}>Add</button>
-                                                                            
-        <table>
+        <div id="header"></div>        
+        <div id="body">
+        
+        <table className ="bodyTable">
+            <tr>
+                <td colSpan="2">
+                    <input type="text" id="item"  name="item" ></input><button onClick={handleAddItem}>Add</button>
+                </td>                                                        
+            </tr>
         {itemList.map((item,index)=> (
         
             <tr key={index}>
                                 
-                    <td width="200"><h3>{item.item}</h3></td><td><button className="btn btn-primary btn-sm" onClick={() =>handleDeleteItem(index)} >remove</button></td>
+                    <td width="200"><b>{item.item}</b></td><td><i class="bi bi-trash-fill" onClick={() =>handleDeleteItem(index)}></i></td>
                 
 
             </tr>
             
         ))}    
         </table>           
-        
+        </div>
 
   </>   
       
