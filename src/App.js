@@ -1,11 +1,11 @@
-import "./App.css";
-import Movies from "./components/Movies.jsx";
+import './App.css';
+import Movie from './components/Movie2'
 
 function App() {
   return (
-    <main className="container">
-      <Movies />
-    </main>
+    <div className="App">
+        <Movie/>
+    </div>
   );
 }
 
