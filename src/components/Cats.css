@@ -1,0 +1,41 @@
+* {
+    background-color: rgb(102, 101, 101);
+}
+
+#dist {
+    text-align: center;
+}
+h1 {
+    color: white;
+  }
+button{
+    color: white;
+    border: 1 solid white;
+}
+#imgCard {
+    text-align: center;
+    padding: 20px;
+    
+}
+.divImg {
+    display: inline-flex;
+    flex-wrap: wrap;
+    position: relative;
+    border: solid 1px;
+}
+.image{
+    width:200px;
+}
+.divName{
+    position:absolute;
+    left: 100px;
+    top:220px;
+    
+}
+.emailDiv{
+    position:absolute;
+    font-size: 10px;
+    left: 100px;
+    top:240px;
+    
+}
