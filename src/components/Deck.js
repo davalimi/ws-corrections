@@ -21,11 +21,10 @@ getCard =async () => {
     var id = this.state.deck.deck_id;
     var cardRes= await axios.get("https://deckofcardsapi.com/api/deck/"+id+"/draw/?count=1");
     //console.log(cardRes);
-    if (cardRes.data.success==false) alert("le paquet de carte est vide");
     var card= cardRes.data.cards[0];
-
-    this.setState((prevState) => ({
-        packet:[...prevState.packet,{
+    
+    this.setState(() => ({
+        packet:[...this.state.packet,{
             id:card.code,
             name:`${card.value} of ${card.suit}`,
             image:card.image
