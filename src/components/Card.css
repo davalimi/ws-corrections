@@ -1,0 +1,26 @@
+* {
+    background-color: black;
+}
+
+#dist {
+    text-align: center;
+}
+h1 {
+    color: white;
+  }
+button{
+    color: white;
+    border: 1 solid white;
+}
+#imgCard {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.image{
+    position: absolute;
+    top:50px;
+    left:550px;
+    
+}
