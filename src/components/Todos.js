@@ -13,9 +13,11 @@ function Todos()  {
 
 
 const handleAddItem = (item) => {
+    
     var node = document.getElementById("item");
-    var a = ReactDOM.findDOMNode(node).value;
-    setItemlist([...itemList,{item:a}]);
+    var a = ReactDOM.findDOMNode(node);
+    setItemlist([...itemList,{item:a.value}]);
+     a.value="";
     
 }
 const handleDeleteItem = (index) => {
@@ -27,20 +29,20 @@ const handleDeleteItem = (index) => {
     
   return(
   <>
-        <div id="header"></div>        
+        <div id="header">TODO</div>        
         <div id="body">
         
-        <table className ="bodyTable">
+            <table className ="bodyTable">
             <tr>
                 <td colSpan="2">
-                    <input type="text" id="item"  name="item" ></input><button onClick={handleAddItem}>Add</button>
+                    <input type="text" id="item"  name="item"  ></input><button onClick={handleAddItem}>Add</button>
                 </td>                                                        
             </tr>
         {itemList.map((item,index)=> (
         
             <tr key={index}>
                                 
-                    <td width="200"><b>{item.item}</b></td><td><i class="bi bi-trash-fill" onClick={() =>handleDeleteItem(index)}></i></td>
+                    <td width="200"><b>{item.item}</b></td><td><i className="bi bi-trash-fill" onClick={() =>handleDeleteItem(index)}></i></td>
                 
 
             </tr>
@@ -48,7 +50,7 @@ const handleDeleteItem = (index) => {
         ))}    
         </table>           
         </div>
-
+      
   </>   
       
   )

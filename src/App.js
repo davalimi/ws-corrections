@@ -4,7 +4,7 @@
 import { Component } from "react";
 import { getMovies } from "./services/fakeMovieService";
 import logo from './logo.svg';
-import './App.css';
+
 
 /*
 

@@ -18,9 +18,9 @@ export class Counters extends Component {
     
 }
 
-handleDelete = (counter) => {
+handleDelete = (id) => {
     
-    const counters= this.state.counters.filter((m)=> m.id!==counter.id);
+    const counters= this.state.counters.filter((m)=> m.id!==id);
     this.setState({ counters: counters});
 }
  

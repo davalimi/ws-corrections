@@ -20,7 +20,7 @@ render(){
     return (
         <>
         <div className={this.state.id}>
-            <img src={this.state.image}  alt={this.state.name} />
+            <img  src={this.state.image}  alt={this.state.name} />
             <div className="divName">{this.state.name}</div>
             <div className="emailDiv">{this.state.email}</div>
         </div> 

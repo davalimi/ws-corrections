@@ -6,12 +6,15 @@ import App3 from './App3';
 import Movies from './components/Movies'; 
 import Counters from './components/Counters'; 
 import Todos from './components/Todos';
+import Card from './components/Card1';
 import reportWebVitals from './reportWebVitals'; 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Deck from './components/Deck';
+import Cats from './components/Cats';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Todos/>
+    <Cats/>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,5 +1,5 @@
 import { Component } from "react";
-import Card from "./Card";
+import Card from "./Test";
 
 export class App3 extends Component {
     constructor(){
